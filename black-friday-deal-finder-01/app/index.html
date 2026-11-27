@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Black Friday Audit — 58 deals checked, 3 flagged</title>
+<meta name="description" content="Every Black Friday deal checked at its store. All-time lows, strong deals, routine sales — and the ones that are not deals at all.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <p class="dateline">FRIDAY 27 NOVEMBER 2026 &middot; BLACK FRIDAY &middot; PRICES CHECKED TODAY</p>
+  <h1>The Black Friday Audit</h1>
+  <p class="tagline">Every deal checked at its store. Every was-price audited. Buy the real ones. Skip the rest.</p>
+  <p class="stats" id="stats">Checking the board&hellip;</p>
+  <nav class="jump">
+    <a href="#flagged">Flagged: not a deal</a>
+    <a href="#board">The verified board</a>
+    <a href="#compare">Same product, two stores</a>
+    <a href="#method">How we checked</a>
+  </nav>
+</header>
+
+<main>
+  <section id="flagged" aria-label="Flagged deals">
+    <h2><span class="stamp">FLAGGED</span> Not a deal</h2>
+    <p class="section-note">Three listings failed the audit. The saving is too small, or the was-price is a store&rsquo;s reference number rather than a price anything sold at. They stay on the board so you can see why.</p>
+    <div class="cards flagged-cards" id="flagged-cards"></div>
+  </section>
+
+  <section id="board" aria-label="Verified deals">
+    <h2>The verified board</h2>
+    <p class="section-note">Every deal below was read at its store or in a deals source naming the store, today. Use the sort to put the best verdicts, the biggest discounts or the lowest prices first.</p>
+    <div class="controls">
+      <label class="search">Search
+        <input id="q" type="search" placeholder="Try &ldquo;headphones&rdquo; or &ldquo;OLED&rdquo;" autocomplete="off">
+      </label>
+      <label>Category
+        <select id="cat"><option value="">All categories</option></select>
+      </label>
+      <label>Store
+        <select id="store"><option value="">All stores</option></select>
+      </label>
+      <label>Discount
+        <select id="off">
+          <option value="">Any discount</option>
+          <option value="30">30% off or more</option>
+          <option value="50">50% off or more</option>
+        </select>
+      </label>
+      <label>Sort by
+        <select id="sort">
+          <option value="verdict">Best verdict first</option>
+          <option value="off">Biggest discount</option>
+          <option value="save">Biggest saving</option>
+          <option value="price">Lowest price</option>
+        </select>
+      </label>
+    </div>
+    <p class="count" id="count"></p>
+    <div class="cards" id="deal-cards"></div>
+    <p class="empty" id="empty" hidden>Nothing matches. Clear the search or widen the filters.</p>
+  </section>
+
+  <section id="compare" aria-label="Same product at two stores">
+    <h2>Same product, two stores</h2>
+    <p class="section-note">The same item on sale in two places. The cheaper store wins — the difference is yours to keep.</p>
+    <div id="compare-rows"></div>
+  </section>
+
+  <section id="method" aria-label="How we checked">
+    <h2>How we checked</h2>
+    <dl class="verdicts">
+      <div><dt class="v-low">All-time low</dt><dd>A deals source calls it a record or new low, or it is the lowest price tracked for the item.</dd></div>
+      <div><dt class="v-strong">Strong deal</dt><dd>At least 30% off, or at least $150 off a flagship item.</dd></div>
+      <div><dt class="v-routine">Routine sale</dt><dd>10&ndash;29% off. A real saving, but the ordinary kind — this price comes round often.</dd></div>
+      <div><dt class="v-flag">Not a deal</dt><dd>Under 10% off, or the was-price is a store&rsquo;s &ldquo;comp value&rdquo; — a reference number, not a price the item sold at.</dd></div>
+    </dl>
+    <p>Each deal lists the store, the sale price, the usual price, the discount, the time its price was checked and the source that showed it. Prices move through the day — check the listing at the store before you pay.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Built 27 November 2026. Not affiliated with Amazon, Best Buy, Walmart or Target. Store names belong to their owners; links go to the product at the store named.</p>
+</footer>
+
+<script type="module" src="main.js"></script>
+</body>
+</html>
