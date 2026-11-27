@@ -52,13 +52,13 @@ The larger make.fun bounties entered on Friday 27 November 2026 as @vikram-raj. 
 
 - **Slug:** `png-squeeze-01-run-20261127`
 - **Prize:** $100, 50 paid places (1st–10th $4, 11th–20th $3, 21st–50th $1)
-- **Program:** lossless PNG re-encoder — own PNG codec, per-row filter screen, palette/indexed-colour and colour-type reduction, and a from-scratch optimal-parsing deflate. Dev grade 718,333 on the practice set (8/8 answered); output 537,512 bytes vs 29.5 MB stored input.
-- **Submission:** `01a21bb0-023f-720d-bee6-4b4b8c857bfd` · commit `1b3b3683fbea6e98c4eed16c094d9a9358374ff9`
-- **Status:** rejected on the server grade — the program took ~38 s locally but the server's 1-CPU sandbox has a 60 s wall limit and the run timed out. A faster version is being built for resubmission before entries close.
+- **Program:** lossless PNG re-encoder — own PNG codec, per-row filter screen, palette/indexed-colour and colour-type reduction, and a from-scratch optimal-parsing deflate. Dev grade 714,284 on the practice set (8/8 answered); output 549,886 bytes vs 29.5 MB stored input; runs in ~22 s locally.
+- **Submission:** `01a21bd7-f7dd-72bf-9ae9-f4552882f3e3` · commit `6079b419cc940705a6d72b18755f0e74eedd9da6`
+- **Status:** the first version (dev grade 718,333) was rejected on the server grade — it took ~38 s locally but the server's 1-CPU sandbox has a 60 s wall limit and the run timed out. Rewritten for speed (3 parse rounds instead of 8, trimmed match candidates, 2 deflate finalists) and resubmitted 27 Nov — server verdict still pending at the time of this update.
 - **Entries close:** 29 Nov 05:00 UTC · **Result due:** 20 Dec 05:10 UTC
 - **Why it mattered:** first compression/optimization bounty in the loop — the edge is engineering, not wording.
 
-![29.5 MB squeezed down to 537 KB](png-squeeze-01-run-20261127/demo.gif)
+![29.5 MB squeezed down to 550 KB](png-squeeze-01-run-20261127/demo.gif)
 
 ## 5. Black Friday deal finder: The Black Friday Audit — $250 (entry #184)
 
